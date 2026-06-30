@@ -1,5 +1,33 @@
+# OS
 .DS_Store
 Thumbs.db
+
+# Environment / secrets
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc archives / binaries
 *.wpress
 *.exe
 *.zip

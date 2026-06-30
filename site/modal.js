@@ -13,7 +13,7 @@
   'use strict';
 
   /* ─── Config ────────────────────────────────────────────────────── */
-  var CONTACT_EMAIL = 'contact@mada.ma';    /* Destination — also set in your EmailJS template */
+  var CONTACT_EMAIL = 'marketingw2026@gmail.com';    /* Destination — also set in your EmailJS template */
   var EMAILJS_KEY   = 'YOUR_PUBLIC_KEY';    /* Replace with your EmailJS public key            */
   var EMAILJS_SVC   = 'YOUR_SERVICE_ID';    /* e.g. 'service_abc1234'                          */
   var EMAILJS_TPL   = 'YOUR_TEMPLATE_ID';   /* e.g. 'template_xyz9876'                         */
