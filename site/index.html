@@ -106,37 +106,18 @@
 
 <!-- =================== À PROPOS =================== -->
 <section class="section" id="apropos">
-  <div class="container about-grid">
-    <div>
+  <div class="container">
+    <div class="section-head">
       <span class="eyebrow reveal">Qui sommes-nous&nbsp;?</span>
-      <h2 class="h-section reveal" data-delay="1" style="margin-top:18px">Une agence, deux expertises complémentaires</h2>
-      <p class="lead reveal" data-delay="2" style="margin-top:22px">MADA est une agence digitale qui accompagne les entreprises dans leur transformation numérique.</p>
-      <p class="lead reveal" data-delay="2" style="margin-top:16px">Notre objectif : créer une image de marque forte, une présence digitale professionnelle et des solutions performantes qui génèrent de vrais résultats.</p>
+      <h2 class="h-section reveal" data-delay="1" style="margin-top:18px">Une équipe pluridisciplinaire à votre service</h2>
+      <p class="lead reveal" data-delay="2">MADA réunit des experts en marketing digital, développement web et intelligence artificielle pour accompagner votre croissance en ligne.</p>
     </div>
-    <div class="profiles">
+    <div class="team-grid">
       <article class="profile-card reveal" data-delay="1">
         <div class="profile-top">
-          <div class="avatar-xl" style="background:var(--gradient-violet)">M</div>
+          <div class="avatar-xl" style="background:var(--gradient-coral)">ME</div>
           <div>
-            <div class="profile-name">Mohamed</div>
-            <div class="profile-role">Développement Web</div>
-          </div>
-        </div>
-        <div class="chips">
-          <span class="chip">Sites vitrines</span>
-          <span class="chip">E-commerce</span>
-          <span class="chip">SEO</span>
-          <span class="chip">Performance</span>
-          <span class="chip">Hébergement</span>
-          <span class="chip">Maintenance</span>
-          <span class="chip">Solutions techniques</span>
-        </div>
-      </article>
-      <article class="profile-card reveal" data-delay="2">
-        <div class="profile-top">
-          <div class="avatar-xl" style="background:var(--gradient-coral)">M</div>
-          <div>
-            <div class="profile-name">Maryam</div>
+            <div class="profile-name">Mariam EL HASSANI</div>
             <div class="profile-role">Marketing Digital</div>
           </div>
         </div>
@@ -146,6 +127,67 @@
           <span class="chip">Content Creation</span>
           <span class="chip">Branding</span>
           <span class="chip">Stratégie digitale</span>
+        </div>
+      </article>
+      <article class="profile-card reveal" data-delay="2">
+        <div class="profile-top">
+          <div class="avatar-xl" style="background:var(--gradient-violet)">LD</div>
+          <div>
+            <div class="profile-name">Louay DEBAGH</div>
+            <div class="profile-role">Marketing Digital</div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Media Buying</span>
+          <span class="chip">Branding</span>
+          <span class="chip">Stratégie digitale</span>
+        </div>
+      </article>
+      <article class="profile-card reveal" data-delay="3">
+        <div class="profile-top">
+          <div class="avatar-xl" style="background:var(--gradient-orange)">FC</div>
+          <div>
+            <div class="profile-name">Fattine Charifa</div>
+            <div class="profile-role">Social Media Specialist</div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Social Media</span>
+          <span class="chip">Content Creation</span>
+          <span class="chip">Branding</span>
+        </div>
+      </article>
+      <article class="profile-card reveal" data-delay="1">
+        <div class="profile-top">
+          <div class="avatar-xl" style="background:var(--gradient-magenta)">MM</div>
+          <div>
+            <div class="profile-name">Mouad Mourafiq</div>
+            <div class="profile-role">AI Engineer</div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Automatisation</span>
+          <span class="chip">Modèles IA</span>
+          <span class="chip">Développement Web</span>
+        </div>
+      </article>
+      <article class="profile-card reveal" data-delay="2">
+        <div class="profile-top">
+          <div class="avatar-xl" style="background:linear-gradient(135deg,#0099FF,#004C99)">MN</div>
+          <div>
+            <div class="profile-name">Mohammed Nafii</div>
+            <div class="profile-role">Web Developer & Data Science</div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Développement Web</span>
+          <span class="chip">Data Science</span>
+          <span class="chip">Automatisation</span>
+          <span class="chip">SEO</span>
+          <span class="chip">Performance</span>
+          <span class="chip">Hébergement</span>
+          <span class="chip">Maintenance</span>
+          <span class="chip">Solutions techniques</span>
         </div>
       </article>
     </div>
@@ -228,33 +270,69 @@
       <span class="eyebrow reveal">Témoignages</span>
       <h2 class="h-section reveal" data-delay="1" style="margin-top:18px">Ils nous ont fait confiance</h2>
     </div>
-    <div class="t-track" id="tTrack">
-      <article class="t-card reveal" data-delay="1">
-        <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
-        <p class="t-quote">« MADA a transformé notre présence en ligne. Notre nouveau site et nos réseaux sociaux nous apportent des clients chaque semaine. »</p>
-        <div class="t-foot">
-          <div class="t-ava" style="background:var(--gradient-violet)">LG</div>
-          <div><div class="t-name">Libre Generation</div><div class="t-co">Marque lifestyle</div></div>
+    <div class="tslider-wrap reveal">
+      <button class="tslider-btn tslider-btn--prev" id="tPrev" aria-label="Témoignage précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="tslider" id="tSlider">
+        <div class="tslider-track" id="tSliderTrack">
+          <div class="tslider-slide">
+            <article class="t-card">
+              <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
+              <p class="t-quote">« MADA nous a accompagnés dans la création d'une présence digitale professionnelle et cohérente. Le résultat est moderne, clair et parfaitement adapté à notre image. »</p>
+              <div class="t-foot">
+                <div class="t-ava" style="background:var(--gradient-violet)">AE</div>
+                <div><div class="t-name">ArtisanEdge</div><div class="t-co">Menuiserie sur mesure</div></div>
+              </div>
+            </article>
+          </div>
+          <div class="tslider-slide">
+            <article class="t-card">
+              <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
+              <p class="t-quote">« L'équipe MADA nous a aidés à améliorer notre communication digitale avec une approche professionnelle, créative et orientée résultats. »</p>
+              <div class="t-foot">
+                <div class="t-ava" style="background:var(--gradient-orange)">ME</div>
+                <div><div class="t-name">Maroc Espèces</div><div class="t-co">Distribution & Commerce</div></div>
+              </div>
+            </article>
+          </div>
+          <div class="tslider-slide">
+            <article class="t-card">
+              <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
+              <p class="t-quote">« MADA a transformé notre présence en ligne. Notre nouveau site et nos réseaux sociaux nous apportent des clients chaque semaine. »</p>
+              <div class="t-foot">
+                <div class="t-ava" style="background:var(--gradient-violet)">LG</div>
+                <div><div class="t-name">Libre Generation</div><div class="t-co">Marque lifestyle</div></div>
+              </div>
+            </article>
+          </div>
+          <div class="tslider-slide">
+            <article class="t-card">
+              <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
+              <p class="t-quote">« Une équipe réactive et créative. Le contenu produit est de grande qualité et notre engagement a explosé. »</p>
+              <div class="t-foot">
+                <div class="t-ava" style="background:var(--gradient-coral)">OG</div>
+                <div><div class="t-name">Ocean Glow</div><div class="t-co">Cosmétiques</div></div>
+              </div>
+            </article>
+          </div>
+          <div class="tslider-slide">
+            <article class="t-card">
+              <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
+              <p class="t-quote">« Notre boutique e-commerce convertit enfin. Campagnes publicitaires rentables et un site rapide — exactement ce qu'il nous fallait. »</p>
+              <div class="t-foot">
+                <div class="t-ava" style="background:var(--gradient-orange)">VG</div>
+                <div><div class="t-name">Volt Gaming</div><div class="t-co">E-commerce gaming</div></div>
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
-      <article class="t-card reveal" data-delay="2">
-        <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
-        <p class="t-quote">« Une équipe réactive et créative. Le contenu produit est de grande qualité et notre engagement a explosé. »</p>
-        <div class="t-foot">
-          <div class="t-ava" style="background:var(--gradient-coral)">OG</div>
-          <div><div class="t-name">Ocean Glow</div><div class="t-co">Cosmétiques</div></div>
-        </div>
-      </article>
-      <article class="t-card reveal" data-delay="3">
-        <div class="t-stars" aria-label="5 sur 5">★★★★★</div>
-        <p class="t-quote">« Notre boutique e-commerce convertit enfin. Campagnes publicitaires rentables et un site rapide — exactement ce qu'il nous fallait. »</p>
-        <div class="t-foot">
-          <div class="t-ava" style="background:var(--gradient-orange)">VG</div>
-          <div><div class="t-name">Volt Gaming</div><div class="t-co">E-commerce gaming</div></div>
-        </div>
-      </article>
+      </div>
+      <button class="tslider-btn tslider-btn--next" id="tNext" aria-label="Témoignage suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
     </div>
-    <div class="t-dots" id="tDots" aria-hidden="true"></div>
+    <div class="tslider-dots" id="tDots" aria-hidden="true"></div>
   </div>
 </section>
 
