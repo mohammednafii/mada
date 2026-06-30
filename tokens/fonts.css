@@ -1,0 +1,10 @@
+/* mada — Webfonts
+ * Display: GT Walsheim Medium (proprietary) → substituted with Hanken Grotesk.
+ *   Hanken Grotesk is a geometric-humanist grotesque; set at weight 500 with
+ *   tightened tracking it reads close to GT Walsheim's confident display voice.
+ *   SUBSTITUTION — flag to user; supply GT Walsheim binaries to match exactly.
+ * Body: Inter (real). Loaded with the documented OpenType character variants.
+ * Both are pulled from Google Fonts so consumers need no binaries.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700&display=swap');

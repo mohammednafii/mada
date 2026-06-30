@@ -1,0 +1,14 @@
+/* mada — Border-radius tokens
+ * Granular scale. Pills for every CTA; 30px for atmospheric gradient cards.
+ */
+
+:root {
+  --radius-xs: 4px;     /* small chip / utility */
+  --radius-sm: 6px;     /* inline tag, badge */
+  --radius-md: 10px;    /* form input, list item */
+  --radius-lg: 15px;    /* template card thumbnails */
+  --radius-xl: 20px;    /* pricing cards, mockup tiles */
+  --radius-xxl: 30px;   /* gradient spotlight cards, oversized panels */
+  --radius-pill: 100px; /* all primary text CTAs */
+  --radius-full: 9999px;/* circular icon buttons, avatars */
+}

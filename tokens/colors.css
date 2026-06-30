@@ -1,0 +1,48 @@
+/* mada — Color tokens
+ * Dark-canvas system: two anchor surfaces (near-black canvas + pure white),
+ * one chromatic signal (sky blue), and the gradient spotlight family.
+ * There is no light mode — the brand IS dark.
+ */
+
+:root {
+  /* --- Brand & accent --- */
+  --primary: #FFFFFF;          /* brand primary surface: pill CTAs, display type, body */
+  --on-primary: #0A0A0A;       /* text/glyph that sits on a white pill */
+  --accent-blue: #0099FF;      /* THE single chromatic signal: links, focus, selection */
+
+  /* --- Surface (lift = hierarchy on dark) --- */
+  --canvas: #0A0A0A;           /* near-black, faint warmth — default page ground */
+  --surface-1: #1A1A1A;        /* one step up: pricing cards, secondary buttons, tiles */
+  --surface-2: #262626;        /* two steps up: featured card, hero pill backdrop, selected tab */
+  --inverse-canvas: #FFFFFF;   /* pure white surface (light pill CTA, light thumbnails) */
+
+  /* --- Hairlines --- */
+  --hairline: rgba(255, 255, 255, 0.10);       /* 1px borders on input groups, table dividers */
+  --hairline-soft: rgba(255, 255, 255, 0.06);  /* subtler: FAQ rows, footer column rules */
+
+  /* --- Text --- */
+  --ink: #FFFFFF;              /* headlines & emphasized body */
+  --ink-muted: #999999;        /* secondary type — meta, footer, deselected tabs */
+
+  /* --- Semantic --- */
+  --semantic-success: #00C566; /* comparison-table checkmarks — glyph fill, not surface */
+
+  /* --- Gradient spotlight family (signature) ---
+   * Anchor hex values + ready-to-use gradient strings.
+   * Treat the hex as base anchors, not exact gradient specs. */
+  --gradient-violet-anchor: #8B5CF6;
+  --gradient-magenta-anchor: #E11D8F;
+  --gradient-orange-anchor: #FF8A3D;
+  --gradient-coral-anchor: #FF6B7A;
+
+  --gradient-violet: radial-gradient(120% 120% at 25% 15%, #B794FF 0%, #7C3AED 38%, #3B1B8F 100%);   /* @kind color */
+  --gradient-magenta: radial-gradient(120% 120% at 30% 20%, #FF6FD8 0%, #E11D8F 42%, #6E0B53 100%); /* @kind color */
+  --gradient-orange: radial-gradient(120% 120% at 25% 18%, #FFC56E 0%, #FF8A3D 40%, #C2410C 100%);  /* @kind color */
+  --gradient-coral: radial-gradient(120% 120% at 28% 18%, #FFB3BD 0%, #FF6B7A 42%, #B13247 100%);   /* @kind color */
+
+  /* --- Focus / selection ring --- */
+  --focus-ring: rgba(0, 153, 255, 0.15);
+  --selection-bg: rgba(0, 153, 255, 0.25);
+}
+
+::selection { background: var(--selection-bg); color: var(--ink); }

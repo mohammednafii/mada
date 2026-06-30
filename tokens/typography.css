@@ -1,0 +1,63 @@
+/* mada — Typography tokens
+ * Two families. Display carries the poster voice via SIZE + extreme negative
+ * tracking (not weight). Body is Inter with bespoke OpenType character variants.
+ * Letter-spacing scales with size, hard: ~-5% at display, ~-1% at body.
+ */
+
+:root {
+  /* --- Families --- */
+  --font-display: 'Hanken Grotesk', 'GT Walsheim Medium', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* The brand body voice. Apply to anything Inter renders. */
+  --inter-features: 'cv01' 1, 'cv05' 1, 'cv09' 1, 'cv11' 1, 'ss03' 1, 'ss07' 1, 'dlig' 1; /* @kind font */
+  --inter-features-tnum: 'cv01' 1, 'cv05' 1, 'cv09' 1, 'cv11' 1, 'ss03' 1, 'ss07' 1, 'dlig' 1, 'tnum' 1; /* @kind font */
+
+  /* --- Sizes (px) --- */
+  --display-xxl-size: 110px; --display-xl-size: 85px; --display-lg-size: 62px; --display-md-size: 32px;
+  --headline-size: 22px; --subhead-size: 24px; --body-lg-size: 18px; --body-size: 15px;
+  --body-sm-size: 14px; --caption-size: 13px; --micro-size: 12px; --button-size: 14px;
+
+  /* --- Letter-spacing (px) --- */
+  --display-xxl-ls: -5.5px; --display-xl-ls: -4.25px; --display-lg-ls: -3.1px; --display-md-ls: -1.0px;
+  --headline-ls: -0.8px; --subhead-ls: -0.01px; --body-lg-ls: -0.18px; --body-ls: -0.15px;
+  --body-sm-ls: -0.14px; --caption-ls: -0.13px; --micro-ls: -0.12px; --button-ls: -0.14px;
+
+  /* --- Line-height (unitless) --- */
+  --display-xxl-lh: 0.85; /* @kind font */
+  --display-xl-lh: 0.95;  /* @kind font */
+  --display-lg-lh: 1.00;  /* @kind font */
+  --display-md-lh: 1.13;  /* @kind font */
+  --headline-lh: 1.20;    /* @kind font */
+  --subhead-lh: 1.30;     /* @kind font */
+  --body-lg-lh: 1.30;     /* @kind font */
+  --body-lh: 1.30;        /* @kind font */
+  --body-sm-lh: 1.40;     /* @kind font */
+  --caption-lh: 1.20;     /* @kind font */
+  --micro-lh: 1.20;       /* @kind font */
+  --button-lh: 1.0;       /* @kind font */
+
+  /* --- Weights --- */
+  --headline-weight: 700; /* @kind font */
+  --subhead-weight: 400;  /* @kind font */
+  --body-lg-weight: 400;  /* @kind font */
+  --body-weight: 400;     /* @kind font */
+  --body-sm-weight: 500;  /* @kind font */
+  --caption-weight: 500;  /* @kind font */
+  --micro-weight: 400;    /* @kind font */
+  --button-weight: 500;   /* @kind font */
+}
+
+/* --- Reusable type classes --- */
+.t-display-xxl { font-family: var(--font-display); font-weight: 500; font-size: var(--display-xxl-size); line-height: var(--display-xxl-lh); letter-spacing: var(--display-xxl-ls); color: var(--ink); }
+.t-display-xl  { font-family: var(--font-display); font-weight: 500; font-size: var(--display-xl-size);  line-height: var(--display-xl-lh);  letter-spacing: var(--display-xl-ls);  color: var(--ink); }
+.t-display-lg  { font-family: var(--font-display); font-weight: 500; font-size: var(--display-lg-size);  line-height: var(--display-lg-lh);  letter-spacing: var(--display-lg-ls);  color: var(--ink); }
+.t-display-md  { font-family: var(--font-display); font-weight: 500; font-size: var(--display-md-size);  line-height: var(--display-md-lh);  letter-spacing: var(--display-md-ls);  color: var(--ink); }
+
+.t-headline { font-family: var(--font-body); font-weight: var(--headline-weight); font-size: var(--headline-size); line-height: var(--headline-lh); letter-spacing: var(--headline-ls); color: var(--ink); font-feature-settings: var(--inter-features); }
+.t-subhead  { font-family: var(--font-body); font-weight: var(--subhead-weight);  font-size: var(--subhead-size);  line-height: var(--subhead-lh);  letter-spacing: var(--subhead-ls);  color: var(--ink); font-feature-settings: var(--inter-features); }
+.t-body-lg  { font-family: var(--font-body); font-weight: var(--body-lg-weight);  font-size: var(--body-lg-size);  line-height: var(--body-lg-lh);  letter-spacing: var(--body-lg-ls);  color: var(--ink); font-feature-settings: var(--inter-features); }
+.t-body     { font-family: var(--font-body); font-weight: var(--body-weight);     font-size: var(--body-size);     line-height: var(--body-lh);     letter-spacing: var(--body-ls);     color: var(--ink); font-feature-settings: var(--inter-features); }
+.t-body-sm  { font-family: var(--font-body); font-weight: var(--body-sm-weight);  font-size: var(--body-sm-size);  line-height: var(--body-sm-lh);  letter-spacing: var(--body-sm-ls);  color: var(--ink); font-feature-settings: var(--inter-features); }
+.t-caption  { font-family: var(--font-body); font-weight: var(--caption-weight); font-size: var(--caption-size); line-height: var(--caption-lh); letter-spacing: var(--caption-ls); color: var(--ink-muted); font-feature-settings: var(--inter-features); }
+.t-micro    { font-family: var(--font-body); font-weight: var(--micro-weight);   font-size: var(--micro-size);   line-height: var(--micro-lh);   letter-spacing: var(--micro-ls);   color: var(--ink-muted); font-feature-settings: var(--inter-features); }

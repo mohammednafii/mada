@@ -1,0 +1,19 @@
+/* mada — Spacing tokens
+ * Non-standard 5px base scale: 1 / 4 / 8 / 12 / 15 / 20 / 30 / 40 / 96.
+ */
+
+:root {
+  --space-hair: 1px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+  --space-xxl: 40px;
+  --space-section: 96px;
+
+  /* Container */
+  --container-max: 1199px;
+  --gutter: 30px;
+}
