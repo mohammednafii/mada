@@ -445,3 +445,140 @@ body::before {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ===================================================================
+   MODAL
+   =================================================================== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 280ms ease;
+}
+.modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+
+.modal {
+  position: relative;
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-xxl);
+  box-shadow: var(--elev-2), 0 40px 80px rgba(0, 0, 0, 0.55);
+  width: 100%; max-width: 580px;
+  max-height: 92vh; overflow-y: auto;
+  padding: 40px 44px 44px;
+  scrollbar-width: none;
+  transform: translateY(28px) scale(0.96);
+  transition: transform 340ms cubic-bezier(.2, .7, .2, 1);
+}
+.modal::-webkit-scrollbar { display: none; }
+.modal-overlay.is-open .modal { transform: translateY(0) scale(1); }
+
+.modal-close {
+  position: absolute; top: 18px; right: 18px;
+  width: 36px; height: 36px; border-radius: var(--radius-full);
+  border: 1px solid var(--hairline); background: var(--surface-2);
+  color: var(--ink-muted); cursor: pointer;
+  display: grid; place-items: center;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.modal-close:hover { background: var(--surface-1); color: var(--ink); border-color: rgba(255,255,255,0.2); }
+.modal-close svg { width: 16px; height: 16px; }
+
+.modal-intro { margin-bottom: 32px; padding-right: 28px; }
+.modal-title {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(22px, 4vw, 28px); letter-spacing: -0.04em;
+  color: var(--ink); line-height: 1.1; margin: 0;
+}
+
+/* ===================================================================
+   FORM FIELDS
+   =================================================================== */
+.modal-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field label { font-size: 13px; font-weight: 500; letter-spacing: -0.12px; color: var(--ink); }
+.form-field .req { color: var(--accent-blue); margin-left: 1px; }
+.form-field .opt { font-weight: 400; color: var(--ink-muted); font-size: 12px; margin-left: 3px; }
+
+.form-input, .form-textarea {
+  width: 100%; padding: 11px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  font-family: var(--font-body); font-size: var(--body-size);
+  font-feature-settings: var(--inter-features);
+  letter-spacing: -0.14px; line-height: 1.5;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  -webkit-appearance: none; appearance: none; box-sizing: border-box;
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--ink-muted); opacity: 0.5; }
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+.form-input.has-error, .form-textarea.has-error {
+  border-color: #E04040;
+  box-shadow: 0 0 0 3px rgba(224, 64, 64, 0.12);
+}
+.form-textarea { resize: vertical; min-height: 106px; }
+
+.field-foot {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 8px; min-height: 18px;
+}
+.field-error { font-size: 12px; color: #E04040; letter-spacing: -0.1px; line-height: 1.4; }
+.char-hint { font-size: 12px; color: var(--ink-muted); white-space: nowrap; flex-shrink: 0; }
+.char-hint.ok { color: var(--semantic-success); }
+
+/* Full-width submit button */
+.btn--full { width: 100%; justify-content: center; gap: 10px; }
+.btn-loader { display: inline-flex; animation: spin 0.75s linear infinite; }
+.btn-loader svg { width: 18px; height: 18px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===================================================================
+   TOAST NOTIFICATIONS
+   =================================================================== */
+.toast-container {
+  position: fixed; bottom: 24px; right: 24px; z-index: 300;
+  display: flex; flex-direction: column; gap: 10px;
+  pointer-events: none; align-items: flex-end;
+}
+.toast {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 18px; border-radius: var(--radius-xl);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--elev-2), 0 16px 40px rgba(0, 0, 0, 0.35);
+  font-size: 14px; line-height: 1.4; max-width: 340px;
+  pointer-events: auto;
+  transform: translateX(calc(100% + 28px)); opacity: 0;
+  transition: transform 360ms cubic-bezier(.2, .7, .2, 1), opacity 280ms ease;
+}
+.toast.is-visible { transform: translateX(0); opacity: 1; }
+.toast--success { background: #091811; border-color: rgba(0, 197, 102, 0.20); }
+.toast--error   { background: #180909; border-color: rgba(224, 64, 64, 0.20); }
+.toast-icon { flex: none; margin-top: 1px; }
+.toast-icon svg { width: 18px; height: 18px; }
+.toast--success .toast-icon svg { color: var(--semantic-success); }
+.toast--error   .toast-icon svg { color: #E04040; }
+.toast-body strong { display: block; font-weight: 600; font-size: 14px; letter-spacing: -0.2px; color: var(--ink); margin-bottom: 3px; }
+.toast-body span { color: var(--ink-muted); font-size: 13px; }
+
+/* ─── Modal + toast responsive ──────────────────────────────────── */
+@media (max-width: 720px) {
+  .modal { padding: 28px 20px 32px; border-radius: var(--radius-xl); max-width: 100%; }
+  .form-row { grid-template-columns: 1fr; gap: 18px; }
+  .toast-container { bottom: 16px; right: 12px; left: 12px; align-items: stretch; }
+  .toast { max-width: 100%; }
+}
+@media (max-width: 460px) {
+  .modal-overlay { padding: 0; align-items: flex-end; }
+  .modal { border-radius: var(--radius-xl) var(--radius-xl) 0 0; max-height: 96vh; }
+}

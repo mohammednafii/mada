@@ -471,7 +471,7 @@
       <div class="cta-inner">
         <h2>Prêt à développer votre activité&nbsp;?</h2>
         <p>Construisons ensemble une présence digitale professionnelle qui inspire confiance et attire de nouveaux clients.</p>
-        <a href="mailto:contact@mada.agency" class="btn btn--primary btn--lg">Prendre un rendez-vous <span class="arrow">→</span></a>
+        <a href="#contact" class="btn btn--primary btn--lg">Prendre un rendez-vous <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
@@ -525,6 +525,67 @@
   </div>
 </footer>
 
+<!-- =================== MODAL RENDEZ-VOUS =================== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-intro">
+      <span class="eyebrow">Consultation gratuite</span>
+      <h2 class="modal-title" id="modalTitle" style="margin-top:12px">Prendre un rendez-vous</h2>
+      <p class="lead" style="margin-top:10px;font-size:15px;color:var(--ink-muted)">Décrivez votre projet — nous vous recontacterons dans les 24h.</p>
+    </div>
+    <form class="modal-form" id="appointmentForm" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fieldName">Nom complet <span class="req" aria-hidden="true">*</span></label>
+          <input class="form-input" type="text" id="fieldName" name="name"
+                 placeholder="Mohamed Alami" autocomplete="name" required />
+          <span class="field-error" id="errorName" role="alert"></span>
+        </div>
+        <div class="form-field">
+          <label for="fieldPhone">Téléphone <span class="req" aria-hidden="true">*</span></label>
+          <input class="form-input" type="tel" id="fieldPhone" name="phone"
+                 placeholder="+212 6 XX XX XX XX" autocomplete="tel" required />
+          <span class="field-error" id="errorPhone" role="alert"></span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fieldEmail">E-mail <span class="opt">(optionnel)</span></label>
+          <input class="form-input" type="email" id="fieldEmail" name="email"
+                 placeholder="vous@exemple.com" autocomplete="email" />
+          <span class="field-error" id="errorEmail" role="alert"></span>
+        </div>
+        <div class="form-field">
+          <label for="fieldCompany">Entreprise <span class="opt">(optionnel)</span></label>
+          <input class="form-input" type="text" id="fieldCompany" name="company"
+                 placeholder="Mon Entreprise" autocomplete="organization" />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="fieldDescription">Description du besoin <span class="req" aria-hidden="true">*</span></label>
+        <textarea class="form-textarea" id="fieldDescription" name="description"
+                  placeholder="Décrivez votre projet, vos objectifs et ce que vous recherchez…" rows="4" required></textarea>
+        <div class="field-foot">
+          <span class="field-error" id="errorDescription" role="alert"></span>
+          <span class="char-hint" id="charHint">0 / 20 min.</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--lg btn--full" id="submitBtn">
+        <span id="submitText">Envoyer ma demande</span>
+        <span id="submitLoader" hidden aria-hidden="true" class="btn-loader">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10" opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+<div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="false"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="main.js"></script>
+<script src="modal.js"></script>
 </body>
 </html>
